@@ -1,0 +1,39 @@
+1. Write a NumPy program to create an array with the values 1, 7, 13, 105    and determine the size of the memory occupied by the array.
+
+2. Write a NumPy program to create an element-wise comparison (greater,    greater_equal, less and less_equal) of two given arrays.
+
+3. Write a NumPy program to create an array of integers from 50 to 95.
+
+4. Write a NumPy program to create an array of all even integers from 20 to 80.
+
+5. Write a NumPy program to generate an array of 10 random numbers from 30 to 50.
+
+6. Write a NumPy program to get the element-wise remainder of an array of numbers from 20 to 50 which are divisible by 3.
+
+7. Write a Pandas program to add, subtract, multiple and divide two Pandas Series.
+   Sample Series: [2, 4, 6, 8, 10], [1, 3, 5, 7, 9]
+
+8. Write a Pandas program to convert a NumPy array to a Pandas series.
+
+9. Write a Pandas program to change the data type of given a column or a Series.
+
+10. i) Create a list of empids and names (10 employees).
+    ii) Convert list into Series.
+    iii) Print type of Series.
+    iv) Convert Series into DataFrame.
+    v) a) Display all records.
+       b) Display first five records.
+       c) Display last five records.
+       d) Display first two and last two records.
+       e) Display name of 5th employee.
+       f) Display record of 4th employee.
+    vi) Save the record in csv file (MyRecord.csv)
+
+11. Consider mtcars.csv file  and plot the following graphs.
+i) Line plot
+ii) Bar Graph
+iii) Pie Chart
+iv) Boxplot
+v) Pairplot
+vi) Scatter Plot
+vii) Histogram
