@@ -1,0 +1,80 @@
+Que. 1 
+Create a Simple Linear Regression model for a given dataset. Also plot regression line.
+
+Datasets:
+1. NewspaperData.csv
+Independent = ‘Daily’, Dependent=’Sunday’
+
+2. delivery_time.csv
+Independent = ‘Sorting Time’, Dependent=’Delivery Time’
+
+3. WC_AT.csv
+Independent = ‘Waist’, Dependent=’AT’
+Adipose Tissue (AT) and Waist Circumference(Waist)
+
+Que. 2
+In the given dataset TVMarketing.csv you have given  sales based on 'TV' marketing budget.
+Build a linear regression model to predict 'Sales' using 'TV' as the predictor variable. Also plot regression line.
+
+Dataset : TVMarketing.csv
+
+Que. 3
+You own an ice cream business and you would like to create a model that could predict the daily revenue in dollars based on the outside air temperature (degC). Build Linear Regression Model and plot regression line.
+
+Dataset : IceCreamData.csv
+
+Que. 4
+In the following dataset you have given SAT score and GPA of students. You have to predict GPA of students by using SAT score.
+Build a Linear Regression Model and plot regression line.
+
+Dataset : SAT-GPA.csv
+
+Que. 5
+Following is the description of columns in dataset ToyotaCorolla.csv. Prepare a prediction model for predicting Price.
+
+Model -- model of the car
+Price  -- Offer Price in EUROs	
+Age_08_04 -- Age in months as in August 2004	
+Mfg_Month -- Manufacturing month (1-12)	
+Mfg_Year	-- Manufacturing Year
+KM -- Accumulated Kilometers on odometer
+Fuel_Type	 -- Fuel Type (Petrol, Diesel, CNG)
+HP -- Horse Power
+Met_Color	 -- Metallic Color?  (Yes=1, No=0)
+Color -- Color (Blue, Red, Grey, Silver, Black, etc.)
+Automatic	-- Automatic ( (Yes=1, No=0)
+cc -- Cylinder Volume in cubic centimeters
+Doors -- Number of doors
+Cylinders	-- Number of cylinders
+Gears -- Number of gear positions
+Quarterly_Tax -- Quarterly road tax in EUROs
+Weight -- Weight in Kilograms
+Mfr_Guarantee -- Within Manufacturer's Guarantee period  (Yes=1, No=0)
+BOVAG_Guarantee -- BOVAG (Dutch dealer network) Guarantee  (Yes=1, No=0)
+Guarantee_Period -- 	Guarantee period in months
+ABS -- Anti-Lock Brake System (Yes=1, No=0)
+Airbag_1 -- Driver_Airbag  (Yes=1, No=0)
+Airbag_2 -- Passenger Airbag  (Yes=1, No=0)
+Airco -- Airconditioning  (Yes=1, No=0)
+Automatic_airco -- Automatic Airconditioning  (Yes=1, No=0)
+Boardcomputer -- Boardcomputer  (Yes=1, No=0)
+CD_Player -- CD Player  (Yes=1, No=0)
+Central_Lock -- Central Lock  (Yes=1, No=0)
+Powered_Windows -- Powered Windows  (Yes=1, No=0)
+Power_Steering -- Power Steering  (Yes=1, No=0)
+Radio -- Radio  (Yes=1, No=0)
+Mistlamps	-- Mistlamps  (Yes=1, No=0)
+Sport_Model -- Sport Model  (Yes=1, No=0)
+Backseat_Divider -- Backseat Divider  (Yes=1, No=0)
+Metallic_Rim --Metallic Rim  (Yes=1, No=0)
+Radio_cassette -- Radio Cassette  (Yes=1, No=0)
+Tow_Bar -- Tow Bar  (Yes=1, No=0)
+
+Consider below columns for prdecting the price.
+("Age_08_04","KM","HP","cc","Doors","Gears","Quarterly_Tax","Weight")
+
+Que. 6
+
+Refer the “Engine.csv” and observe the dataset and decide type of Regression.
+Datasets provide fuel consumption ratings and estimated carbon dioxide emissions for new light-duty vehicles for retail sale in Canada.
+Predict the Co2emission for with given fuel consumption ratings CYLINDERS, ENGINESIZE, FUELCONSUMPTION_COMB.
