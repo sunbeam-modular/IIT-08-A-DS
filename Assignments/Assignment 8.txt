@@ -1,0 +1,105 @@
+Que.1
+The iris.csv dataset contains measurements of iris flowers belonging to three different species:
+Each flower is described using four numerical features:
+Sepal Length (cm)
+Sepal Width (cm)
+Petal Length (cm)
+Petal Width (cm)
+The dataset consists of 150 records & you have to predict the species of iris flowers.
+Prepare model by using Logistic Regression, KNN, SVM, Decision Tree, Random Forest, AdaBoost, CatBoost & Calculate Accuracy by confusion matrix, Calculate accuracy score, precision score, recall score, f1 score.
+Also Prepare summary of all models & Select best of them.
+
+Que.2
+The titanic.csv dataset contains information about passengers aboard the RMS Titanic, 
+including their demographic details, travel class, and fare information. 
+The dataset aims to analyze the factors that influenced passenger survival during the tragic shipwreck.
+Each record in the dataset represents one passenger with the following attributes:
+PassengerId
+Survived (0 = No, 1 = Yes)
+Pclass (Passenger class: 1st, 2nd, 3rd)
+Name
+Sex
+Age
+SibSp (Number of siblings/spouses aboard)
+Parch (Number of parents/children aboard)
+Ticket
+Fare
+Cabin
+Embarked (Port of embarkation: C, Q, S)
+Build Logistic Regression, KNN, SVM, Decision Tree, Random Forest, AdaBoost, CatBoost models to predict whether a passenger survived or not & 
+Calculate Accuracy by confusion matrix, Calculate accuracy score, precision score, recall score, f1 score.
+Also Prepare summary of all models & Select best of them.
+
+Que.3
+The diabetes.csv dataset contains medical diagnostic measurements of patients. The goal is to analyze these health parameters and predict whether a patient is diabetic or not.
+Each record in the dataset represents a patient with the following attributes:
+Pregnancies
+Glucose
+BloodPressure
+SkinThickness
+Insulin
+BMI
+DiabetesPedigreeFunction
+Age
+Outcome (0 = Non-Diabetic, 1 = Diabetic)
+Prepare model by using Logistic Regression, KNN, SVM, Decision Tree, Random Forest, AdaBoost, CatBoost & Calculate Accuracy by confusion matrix, Calculate accuracy score, precision score, recall score, f1 score.
+Also Prepare summary of all models & Select best of them.
+
+Que.4
+The ObesityLevel.csv dataset contains information related to individuals’ eating habits, physical condition, and lifestyle factors. 
+The dataset is used to estimate obesity levels in individuals from Mexico, Peru, and Colombia.
+
+Dataset Description:
+Each record represents an individual with multiple attributes, including:
+Physical Characteristics
+Age
+Height
+Weight
+
+Eating Habits
+Frequent consumption of high caloric food (FAVC)
+Frequency of consumption of vegetables (FCVC)
+Number of main meals (NCP)
+Consumption of food between meals (CAEC)
+Consumption of alcohol (CALC)
+
+Physical Activity & Lifestyle
+Physical activity frequency (FAF)
+Time using technology devices (TUE)
+Transportation used (MTRANS)
+
+Other Attributes
+Gender
+Family history with overweight (family_history_with_overweight)
+Smoking habits (SMOKE)
+Water consumption daily (CH2O)
+
+Target Variable
+NObesity (Obesity Level)
+
+Build Logistic Regression, KNN, SVM, Decision Tree, Random Forest, AdaBoost, CatBoost models that can predict the obesity level of an individual based on their physical attributes and lifestyle habits.
+Calculate Accuracy by confusion matrix, Calculate accuracy score, precision score, recall score, f1 score.
+Also Prepare summary of all models & Select best of them.
+
+Que.5
+The heart.csv dataset contains clinical and demographic information of patients. 
+The objective is to analyze these medical attributes and predict whether a patient has heart disease.
+
+Dataset Description:
+Each record represents a patient with the following attributes:
+Age
+Sex
+ChestPainType
+RestingBP (Resting Blood Pressure)
+Cholesterol
+FastingBS (Fasting Blood Sugar)
+RestingECG
+MaxHR (Maximum Heart Rate Achieved)
+ExerciseAngina
+Oldpeak (ST depression)
+ST_Slope
+HeartDisease
+
+Build Logistic Regression, KNN, SVM, Decision Tree, Random Forest, AdaBoost, CatBoost models that can predict the presence or absence of heart disease based on patient health indicators.
+Calculate Accuracy by confusion matrix, Calculate accuracy score, precision score, recall score, f1 score.
+Also Prepare summary of all models & Select best of them.
