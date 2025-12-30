@@ -1,0 +1,110 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import re
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+
+st.set_page_config(page_title="Vehicle Insurance Claim Prediction", layout="wide")
+st.title("Vehicle Insurance Claim Prediction")
+
+
+def extract_number(text):
+    try:
+        return float(re.findall(r'\d+\.?\d*', str(text))[0])
+    except:
+        return 0.0
+
+TEXT_NUMERIC_COLS = ["max_torque", "max_power"]
+
+
+@st.cache_data
+def prepare_model():
+    df = pd.read_csv("train.csv")
+    df = df.iloc[:, :44]
+
+    df.drop("policy_id", axis=1, inplace=True)
+    df.replace({"Yes": 1, "No": 0}, inplace=True)
+
+    raw_df = df.copy()
+
+   
+    df["torque"] = df["max_torque"].apply(extract_number)
+    df["power"] = df["max_power"].apply(extract_number)
+    df.drop(["max_torque", "max_power"], axis=1, inplace=True)
+
+    cat_cols = df.select_dtypes(include="object").columns
+    df_encoded = pd.get_dummies(df, columns=cat_cols, drop_first=True)
+
+    X = df_encoded.drop("is_claim", axis=1)
+    y = df_encoded["is_claim"]
+
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
+
+    model = LogisticRegression(max_iter=500)
+    model.fit(X_scaled, y)
+
+    return model, scaler, raw_df, cat_cols, X.columns
+
+model, scaler, raw_df, cat_cols, final_features = prepare_model()
+
+st.success("Model trained successfully")
+st.divider()
+
+st.subheader("Enter Vehicle & Policy Details")
+
+user_input = {}
+cols = st.columns(3)
+idx = 0
+
+for column in raw_df.columns:
+    if column == "is_claim":
+        continue
+
+    with cols[idx % 3]:
+
+        
+        if column in TEXT_NUMERIC_COLS:
+            user_input[column] = st.text_input(
+                column,
+                value=raw_df[column].mode()[0]
+            )
+
+        
+        elif column in cat_cols:
+            user_input[column] = st.selectbox(
+                column,
+                options=sorted(raw_df[column].dropna().unique())
+            )
+
+        
+        else:
+            user_input[column] = st.number_input(
+                column,
+                value=float(raw_df[column].mean())
+            )
+
+    idx += 1
+
+input_df = pd.DataFrame([user_input])
+
+
+input_df["torque"] = input_df["max_torque"].apply(extract_number)
+input_df["power"] = input_df["max_power"].apply(extract_number)
+input_df.drop(["max_torque", "max_power"], axis=1, inplace=True)
+
+input_encoded = pd.get_dummies(input_df, columns=cat_cols, drop_first=True)
+input_encoded = input_encoded.reindex(columns=final_features, fill_value=0)
+
+
+if st.button("Predict Claim", use_container_width=True):
+    input_scaled = scaler.transform(input_encoded)
+    prediction = model.predict(input_scaled)[0]
+    probability = model.predict_proba(input_scaled)[0][1]
+
+    st.divider()
+    if prediction == 1:
+        st.error(f"CLAIM LIKELY\n\nProbability: {probability:.2f}")
+    else:
+        st.success(f"NO CLAIM\n\nProbability: {probability:.2f}")
